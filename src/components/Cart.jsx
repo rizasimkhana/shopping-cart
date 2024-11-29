@@ -8,11 +8,15 @@ function Cart({ cartItems, removeFromCart, closeCart}) {
         <ul className="mb-4">
           {cartItems.map((item, index) => (
             <li key={index} className="flex justify-between mb-2">
+              <img src={item.image} alt={item.title} className="w-1/2 h-48  mb-4 rounded-md" />
               <span>{item.name}</span>
               <div className="flex items-center space-x-2">
                 <span>${item.price}</span>
-                <button
-                  onClick={() => removeFromCart(item.id)}
+                <button   id="remove"
+                  onClick={() => removeFromCart(item.id)
+                  
+                 
+                  }
                   className="bg-red-500 text-white px-2 py-1 rounded hover:bg-red-700"
                 >
                   Remove

@@ -30,6 +30,9 @@ function App() {
   const removeFromCart = (productId) => {
     const updatedCart = cartItems.filter((item) => item.id !== productId);
     setCartItems(updatedCart);
+    if(updatedCart==0){
+      alert("your cart is empty")
+    }
   };
 
 
@@ -73,7 +76,7 @@ function App() {
         </div>
 
         {/* Display Cart Modal if isCartOpen is true */}
-        {isCartOpen && <Cart cartItems={cartItems} removeFromCart={removeFromCart} closeCart={closeCart} />}
+        {isCartOpen && <Cart  cartItems={cartItems} removeFromCart={removeFromCart} closeCart={closeCart} />}
       </div>
     </>
 
