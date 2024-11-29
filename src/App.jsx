@@ -1,7 +1,6 @@
 import Cart from "./components/Cart";
 import Item from "./components/Item";
 import React, { useState,useEffect} from 'react';
-import Swal from 'sweetalert2'
 function App() {
   const [cartItems, setCartItems] = useState([]);
   const [isCartOpen,setIsCartOpen] = useState(false);
