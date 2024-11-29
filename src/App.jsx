@@ -1,6 +1,7 @@
 import Cart from "./components/Cart";
 import Item from "./components/Item";
 import React, { useState,useEffect} from 'react';
+
 function App() {
   const [cartItems, setCartItems] = useState([]);
   const [isCartOpen,setIsCartOpen] = useState(false);
@@ -19,8 +20,7 @@ function App() {
     // Check if the item is already in the cart
     const itemExists = cartItems.some((item) => item.id === product.id);
     if (itemExists) {
-      // alert('This item is already in your cart!');
-      Swal.fire("This item is already added");
+     alert('This item is already in your cart!');
       return;
     }
     setCartItems([...cartItems, product]);
